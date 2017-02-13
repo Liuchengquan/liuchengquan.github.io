@@ -6,17 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016/12 | Alex&#39;s home</title>
+  <title>cocoapodinstall | Alex&#39;s home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="黑龙江财经学院09级，目前处于离职状态，擅长iOS开发，略懂SQL，HTML等。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alex's home">
-<meta property="og:url" content="http://yoursite.com/archives/2016/12/index.html">
+  <meta name="description" content="cocoapods 安装1.设置ruby的软件源
+    查看软件源  gem source -l
+    删除软件源  gem source -remove https://...
+    添加软件源  gem source -a http://...
+    目前我用的源是  &amp;apos;https://gem.ruby-china.org/&amp;apos;
+    ps:很有意思的是每一个安装都">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cocoapodinstall">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/cocoapodinstall/index.html">
 <meta property="og:site_name" content="Alex's home">
-<meta property="og:description" content="黑龙江财经学院09级，目前处于离职状态，擅长iOS开发，略懂SQL，HTML等。">
+<meta property="og:description" content="cocoapods 安装1.设置ruby的软件源
+    查看软件源  gem source -l
+    删除软件源  gem source -remove https://...
+    添加软件源  gem source -a http://...
+    目前我用的源是  &amp;apos;https://gem.ruby-china.org/&amp;apos;
+    ps:很有意思的是每一个安装都">
+<meta property="og:updated_time" content="2017-02-13T09:51:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alex's home">
-<meta name="twitter:description" content="黑龙江财经学院09级，目前处于离职状态，擅长iOS开发，略懂SQL，HTML等。">
+<meta name="twitter:title" content="cocoapodinstall">
+<meta name="twitter:description" content="cocoapods 安装1.设置ruby的软件源
+    查看软件源  gem source -l
+    删除软件源  gem source -remove https://...
+    添加软件源  gem source -a http://...
+    目前我用的源是  &amp;apos;https://gem.ruby-china.org/&amp;apos;
+    ps:很有意思的是每一个安装都">
   
     <link rel="alternative" href="/atom.xml" title="Alex&#39;s home" type="application/atom+xml">
   
@@ -140,241 +156,127 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-cocoapodinstall" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
         
   
+    <h1 class="article-title" itemprop="name">
+      cocoapodinstall
+    </h1>
   
+
+        <a href="/2017/02/13/cocoapodinstall/" class="archive-article-date">
+  	<time datetime="2017-02-13T04:18:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
+</a>
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="cocoapods-安装"><a href="#cocoapods-安装" class="headerlink" title="cocoapods 安装"></a>cocoapods 安装</h2><pre><code>1.设置ruby的软件源
+    查看软件源  gem source -l
+    删除软件源  gem source -remove https://...
+    添加软件源  gem source -a http://...
+    目前我用的源是  &apos;https://gem.ruby-china.org/&apos;
+    ps:很有意思的是每一个安装都会遇到各种各样的问题，很是无奈...
+    <figure class="highlight plain"><figcaption><span>gem</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ERROR:While executing gem...(Error::EPERM)</div><div class="line">Operation not permitted - /user/bin/xcodeproj</div></pre></td></tr></table></figure>
+
+    解决办法
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /user/local/bin cocoapods</div></pre></td></tr></table></figure>
+
+    上面的方法只是一个治标不治本的方法， 想要一劳永逸的话还是要使用强大的Homebrew
+    （brew.sh）
+2.安装pod 
+   ``` pod```  setup  无尽的等待...
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/07/私有Pod创建/" class="archive-article-date">
-  	<time datetime="2016-12-07T07:31:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/07/私有Pod创建/">私有Pod创建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pod-私有仓库/">pod 私有仓库</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pods/">pods</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/Linux命令一/" class="archive-article-date">
-  	<time datetime="2016-12-06T06:27:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/Linux命令一/">Linux常用命令  (一)</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-	</div>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/07/私有Pod创建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">私有Pod创建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/必备插件/" class="archive-article-date">
-  	<time datetime="2016-12-06T04:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/必备插件/">必备插件</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/homeBrew-pod/">homeBrew pod</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/hexo简单命令/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:26:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/hexo简单命令/">hexo简单命令</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/01/self-introduction/" class="archive-article-date">
-  	<time datetime="2016-12-01T08:54:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/01/self-introduction/">self-introduction</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/01/随笔小记一/" class="archive-article-date">
-  	<time datetime="2016-12-01T08:03:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/01/随笔小记一/">随笔小记一</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">-随笔</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/01/markdown-study/" class="archive-article-date">
-  	<time datetime="2016-12-01T06:39:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/01/markdown-study/">Markdown 语法练习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
       </div>
@@ -396,8 +298,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
