@@ -142,6 +142,123 @@
       <div class="body-wrap">
         
   
+    <article id="post-OBJC基础" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/07/OBJC基础/">OBJC基础</a>
+    </h1>
+  
+
+        <a href="/2017/05/07/OBJC基础/" class="archive-article-date">
+  	<time datetime="2017-05-07T05:50:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Object-运行时中的几种重要的类型"><a href="#Object-运行时中的几种重要的类型" class="headerlink" title="Object 运行时中的几种重要的类型"></a>Object 运行时中的几种重要的类型</h3><ul>
+<li>Class : 定义了Objective-C类</li>
+<li>Ivar  : 定义对象的实例变量，包括类型和名字。</li>
+<li>Protocol: 定义正式协议</li>
+<li>objc_property_t : 定义属性</li>
+<li>Method: 定义对象方法和类方法。包含了SEL 和IMP</li>
+<li>SEL: 定义选择器，方法的唯一标识符，是歌整数类型</li>
+<li>IMP: 定义方法的实现。指向某一个函数的指针 PREREFFFFV</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IMP/">IMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SEL/">SEL</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-GCDArticle1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/16/GCDArticle1/">GCDArticle1</a>
+    </h1>
+  
+
+        <a href="/2017/03/16/GCDArticle1/" class="archive-article-date">
+  	<time datetime="2017-03-16T01:09:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-16</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h3><h5 id="什么是GCD？"><a href="#什么是GCD？" class="headerlink" title="什么是GCD？"></a>什么是GCD？</h5><p>要了解GCD首先要说一下什么是GCD ？ Grand Central Dispatch  是一种异步执行任务的技术。主要作用是将线程管理中的代码放到系统级中实现。使用者只需要定义想执行的任务并追加到适当的Dispatch Queue 中，GCD就可以生成必要的线程并计划执行任务。</p>
+<h5 id="GCD-的API"><a href="#GCD-的API" class="headerlink" title="GCD 的API"></a>GCD 的API</h5><p>Dispatch Queue 的种类有两种</p>
+<ul>
+<li>等待执行结束 继续下一个 。 Serial Dispatch Queue 。 使用一个线程。</li>
+<li>不等待执行结束 继续下一个。 Concurrent Dispatch Queue。使用多个线程。</li>
+</ul>
+<p>Dispatch Queue 创建<br>第一种 dispatch_queue_create  创建<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dispatch_queue_t customSerialQueue = </div><div class="line">dispatch_queue_create(&quot;com.liuchengquan.gcd.customSerialQueue&quot;,NULL);</div><div class="line">dispatch_queue_t customConcurrentQueue = </div><div class="line">dispatch_queue_create(&quot;com.liuchengquan.gcd.customConcurrentQueue&quot;,DISPATCH_QUEUE_CONCURRENT);</div></pre></td></tr></table></figure></p>
+<p>值得注意的是由我们自己创建的Dispatch Queue 也必须要由我们自己来释放。<br>通过dispatch_queue_create 创建的要使用dispatch_release(customSerialQueue); 来释放。</p>
+<p>第二种是获取系统提供的标准Dispatch Queue<br>Main Dispatch Queue  – Serial Dispatch Queue<br>Global Dispatch Queue – Concurrent Dispatch Queue<br>Global Dispatch Queue 的四个优先级。 1. High 2.Default 3.Low 4.Background </p>
+<p>系统线程的获取<br>dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT ,0);</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GCD/">GCD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多线程/">多线程</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-cocoapodinstall" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -665,7 +782,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/随笔/" style="font-size: 10px;">-随笔</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/homeBrew-pod/" style="font-size: 10px;">homeBrew pod</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/pod-私有仓库/" style="font-size: 10px;">pod 私有仓库</a> <a href="/tags/pods/" style="font-size: 10px;">pods</a>
+    				<a href="/tags/随笔/" style="font-size: 10px;">-随笔</a> <a href="/tags/GCD/" style="font-size: 10px;">GCD</a> <a href="/tags/IMP/" style="font-size: 10px;">IMP</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/SEL/" style="font-size: 10px;">SEL</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/homeBrew-pod/" style="font-size: 10px;">homeBrew pod</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/pod-私有仓库/" style="font-size: 10px;">pod 私有仓库</a> <a href="/tags/pods/" style="font-size: 10px;">pods</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a>
     			</div>
     	</section>
     
