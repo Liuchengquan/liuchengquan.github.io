@@ -142,6 +142,69 @@
       <div class="body-wrap">
         
   
+    <article id="post-python更新" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/08/python更新/">python更新</a>
+    </h1>
+  
+
+        <a href="/2017/05/08/python更新/" class="archive-article-date">
+  	<time datetime="2017-05-08T05:37:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###python更新###<br>因为系统自带的python版本是2.7 所有我想要给更新成最新的版本，试过了好多中方法但是总会遇到各种各样的错误。但是总有一种方法可以成功，所以来写下来，希望能给大家带来方便。</p>
+<ol>
+<li>因为我是使用的<a href="https://brew.sh" target="_blank" rel="external">brew</a>安装，没有安装的朋友可以安装一个试试，非常的方便，当然安装python的方法有很多种，也可以去<a href="https://www.python.org/downloads/" target="_blank" rel="external">官网下载</a><br><code>brew install python3</code> 安装python3</li>
+<li>删除Mac自带的Python2.7 (这一步骤是非必须的，删除以后xcode打不开，因为xcode 运行是要跑基于python2.7的脚本)<br><code>sudo rm -R /System/Library/Frameworks/Python.framework/Versions/2.7</code></li>
+<li>把新下载的Python 移动到系统位置<br><code>sudo mv /Library/Frameworks/Python.framework/Versions/3.5 /System/Library/Frameworks/Python.framework/Versions</code><br>tips:在上面的过程中可能会出现权限的问题，是因为OS X EI Capitan 使用了Rootless保护系统内核,默认的情况下会锁定/system /sbin /usr 这三个目录，所以说我们如果要操作这几个目录的时候就需要先关闭这个保护。方法也很简单。重启电脑进入恢复模式<code>Command-R</code>，实用工具-终端 输入 <code>csrutil disable</code> 关闭内核保护，<code>csrutil enable</code> 恢复保护。</li>
+<li>修改文件所属Group权限<br><code>sudo chown -R root:wheel /System/Library/Frameworks/Python.framework/Versions/3.5</code></li>
+<li><p>删除系统自带的Python link 并更改指定link</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo rm /System/Library/Frameworks/Python.framework/Versions/Current </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5 /System/Library/Frameworks/Python.framework/Versions/Current</div></pre></td></tr></table></figure>
+</li>
+<li><p>重新链接可执行文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo rm /usr/bin/pydoc </div><div class="line">sudo rm /usr/bin/python </div><div class="line">sudo rm /usr/bin/pythonw </div><div class="line">sudo rm /usr/bin/python-config</div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/pydoc3.5 /usr/bin/pydoc </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /usr/bin/python </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/pythonw3.5 /usr/bin/pythonw </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5m-config /usr/bin/python-config</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>查看Python版本：<code>python -V</code> 结束</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python3-5/">python3.5</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-OBJC基础" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -668,60 +731,10 @@
 
 
   
-    <article id="post-markdown-study" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/01/markdown-study/">Markdown 语法练习</a>
-    </h1>
-  
-
-        <a href="/2016/12/01/markdown-study/" class="archive-article-date">
-  	<time datetime="2016-12-01T06:39:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="因为是第一次用markdown写东西-感觉这东西还不错，所以第一篇文章就是熟悉一下markdown的语法吧"><a href="#因为是第一次用markdown写东西-感觉这东西还不错，所以第一篇文章就是熟悉一下markdown的语法吧" class="headerlink" title="因为是第一次用markdown写东西,感觉这东西还不错，所以第一篇文章就是熟悉一下markdown的语法吧"></a>因为是第一次用markdown写东西,感觉这东西还不错，所以第一篇文章就是熟悉一下markdown的语法吧</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="http://music.163.com/outchain/player?type=2&id=28593197&auto=0&height=32"></iframe><br>为什么非要播放这首歌呢，是因为媳妇今天说这首歌听好听，没有别的原因。</p>
-<ul>
-<li><p>插入一个音乐</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=298 height=52 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=28593197&amp;auto=0&amp;height=32&quot;&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure>
-<p>  这是我在网易云音乐上找的歌曲，然后生成外链播放器，拷贝代码。当然如果你不喜欢播放器的小框框你也把它隐藏起来，只要修改<code>width = 0 height = 0</code>就可以了。</p>
-        <a class="article-more-a"  href="/2016/12/01/markdown-study/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -782,7 +795,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/随笔/" style="font-size: 10px;">-随笔</a> <a href="/tags/GCD/" style="font-size: 10px;">GCD</a> <a href="/tags/IMP/" style="font-size: 10px;">IMP</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/SEL/" style="font-size: 10px;">SEL</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/homeBrew-pod/" style="font-size: 10px;">homeBrew pod</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/pod-私有仓库/" style="font-size: 10px;">pod 私有仓库</a> <a href="/tags/pods/" style="font-size: 10px;">pods</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a>
+    				<a href="/tags/随笔/" style="font-size: 10px;">-随笔</a> <a href="/tags/GCD/" style="font-size: 10px;">GCD</a> <a href="/tags/IMP/" style="font-size: 10px;">IMP</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/SEL/" style="font-size: 10px;">SEL</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/homeBrew-pod/" style="font-size: 10px;">homeBrew pod</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/pod-私有仓库/" style="font-size: 10px;">pod 私有仓库</a> <a href="/tags/pods/" style="font-size: 10px;">pods</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/python3-5/" style="font-size: 10px;">python3.5</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a>
     			</div>
     	</section>
     

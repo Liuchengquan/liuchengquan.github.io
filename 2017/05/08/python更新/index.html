@@ -6,17 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: homeBrew pod | Alex&#39;s home</title>
+  <title>python更新 | Alex&#39;s home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="黑龙江财经学院09级，目前处于离职状态，擅长iOS开发，略懂SQL，HTML等。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alex's home">
-<meta property="og:url" content="http://yoursite.com/tags/homeBrew-pod/index.html">
+  <meta name="description" content="###python更新###因为系统自带的python版本是2.7 所有我想要给更新成最新的版本，试过了好多中方法但是总会遇到各种各样的错误。但是总有一种方法可以成功，所以来写下来，希望能给大家带来方便。
+
+因为我是使用的brew安装，没有安装的朋友可以安装一个试试，非常的方便，当然安装python的方法有很多种，也可以去官网下载brew install python3 安装python3
+删除M">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python更新">
+<meta property="og:url" content="http://yoursite.com/2017/05/08/python更新/index.html">
 <meta property="og:site_name" content="Alex's home">
-<meta property="og:description" content="黑龙江财经学院09级，目前处于离职状态，擅长iOS开发，略懂SQL，HTML等。">
+<meta property="og:description" content="###python更新###因为系统自带的python版本是2.7 所有我想要给更新成最新的版本，试过了好多中方法但是总会遇到各种各样的错误。但是总有一种方法可以成功，所以来写下来，希望能给大家带来方便。
+
+因为我是使用的brew安装，没有安装的朋友可以安装一个试试，非常的方便，当然安装python的方法有很多种，也可以去官网下载brew install python3 安装python3
+删除M">
+<meta property="og:updated_time" content="2017-05-10T11:59:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alex's home">
-<meta name="twitter:description" content="黑龙江财经学院09级，目前处于离职状态，擅长iOS开发，略懂SQL，HTML等。">
+<meta name="twitter:title" content="python更新">
+<meta name="twitter:description" content="###python更新###因为系统自带的python版本是2.7 所有我想要给更新成最新的版本，试过了好多中方法但是总会遇到各种各样的错误。但是总有一种方法可以成功，所以来写下来，希望能给大家带来方便。
+
+因为我是使用的brew安装，没有安装的朋友可以安装一个试试，非常的方便，当然安装python的方法有很多种，也可以去官网下载brew install python3 安装python3
+删除M">
   
     <link rel="alternative" href="/atom.xml" title="Alex&#39;s home" type="application/atom+xml">
   
@@ -140,54 +150,126 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-python更新" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/必备插件/" class="archive-article-date">
-  	<time datetime="2016-12-06T04:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/必备插件/">必备插件</a>
+    <h1 class="article-title" itemprop="name">
+      python更新
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2017/05/08/python更新/" class="archive-article-date">
+  	<time datetime="2017-05-08T05:37:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###python更新###<br>因为系统自带的python版本是2.7 所有我想要给更新成最新的版本，试过了好多中方法但是总会遇到各种各样的错误。但是总有一种方法可以成功，所以来写下来，希望能给大家带来方便。</p>
+<ol>
+<li>因为我是使用的<a href="https://brew.sh" target="_blank" rel="external">brew</a>安装，没有安装的朋友可以安装一个试试，非常的方便，当然安装python的方法有很多种，也可以去<a href="https://www.python.org/downloads/" target="_blank" rel="external">官网下载</a><br><code>brew install python3</code> 安装python3</li>
+<li>删除Mac自带的Python2.7 (这一步骤是非必须的，删除以后xcode打不开，因为xcode 运行是要跑基于python2.7的脚本)<br><code>sudo rm -R /System/Library/Frameworks/Python.framework/Versions/2.7</code></li>
+<li>把新下载的Python 移动到系统位置<br><code>sudo mv /Library/Frameworks/Python.framework/Versions/3.5 /System/Library/Frameworks/Python.framework/Versions</code><br>tips:在上面的过程中可能会出现权限的问题，是因为OS X EI Capitan 使用了Rootless保护系统内核,默认的情况下会锁定/system /sbin /usr 这三个目录，所以说我们如果要操作这几个目录的时候就需要先关闭这个保护。方法也很简单。重启电脑进入恢复模式<code>Command-R</code>，实用工具-终端 输入 <code>csrutil disable</code> 关闭内核保护，<code>csrutil enable</code> 恢复保护。</li>
+<li>修改文件所属Group权限<br><code>sudo chown -R root:wheel /System/Library/Frameworks/Python.framework/Versions/3.5</code></li>
+<li><p>删除系统自带的Python link 并更改指定link</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo rm /System/Library/Frameworks/Python.framework/Versions/Current </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5 /System/Library/Frameworks/Python.framework/Versions/Current</div></pre></td></tr></table></figure>
+</li>
+<li><p>重新链接可执行文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo rm /usr/bin/pydoc </div><div class="line">sudo rm /usr/bin/python </div><div class="line">sudo rm /usr/bin/pythonw </div><div class="line">sudo rm /usr/bin/python-config</div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/pydoc3.5 /usr/bin/pydoc </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /usr/bin/python </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/pythonw3.5 /usr/bin/pythonw </div><div class="line">sudo ln <span class="_">-s</span> /System/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5m-config /usr/bin/python-config</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>查看Python版本：<code>python -V</code> 结束</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/homeBrew-pod/">homeBrew pod</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python3-5/">python3.5</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/07/OBJC基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OBJC基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
 
 
       </div>
@@ -209,9 +291,9 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
